@@ -1,0 +1,2 @@
+// Shared settings
+SWIFT_TREAT_WARNINGS_AS_ERRORS = YES // keep the tree clean

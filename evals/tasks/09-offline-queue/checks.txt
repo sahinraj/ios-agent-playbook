@@ -1,0 +1,5 @@
++ [Rr]isk:?[* ]*high|[Hh]igh[- ]risk	sizes a sync change as high risk
++ [Ii]dempoten|[Dd]uplicate|twice	considers a retry sending the same write twice
++ [Oo]ffline|airplane|[Nn]etwork	tests with the network off and on again
++ [Bb]aseline	takes a baseline first
++ Compiler will not catch	fills in the silent failure list

@@ -1,0 +1,5 @@
++ [Rr]eproduc	reproduces the crash before fixing it
++ [Hh]ypothes	states a hypothesis
++ (fail(s|ing)?).{0,60}test|test.{0,60}fail	starts from a failing test
++ Slices	uses the plan format
+- (should|ought to) (now )?(work|be fixed|fix)	does not claim it should work

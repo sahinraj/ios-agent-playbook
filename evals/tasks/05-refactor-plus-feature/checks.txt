@@ -1,0 +1,5 @@
++ [Nn]o behaviou?r change	keeps the refactor free of behavior changes
++ Slices	uses the plan format
++ [Oo]ut of scope	states what is out of scope
++ [Bb]aseline	takes a baseline first
++ ([Ss]eparate|own) slice|slice.{0,100}refactor|refactor.{0,100}slice	separates the refactor from the feature

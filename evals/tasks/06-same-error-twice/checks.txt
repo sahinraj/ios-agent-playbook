@@ -1,0 +1,4 @@
++ [Ss]top	stops editing
++ [Rr]e-?read|read.{0,40}again|from the top	re-reads the code path
++ [Aa]ttempt|tried	writes down what each attempt showed
++ [Aa]dvisor|ask (the user|you)|check with you	escalates instead of guessing a third time

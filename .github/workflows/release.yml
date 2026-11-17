@@ -1,0 +1,36 @@
+name: Publish v1.0.0
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/release.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Build release archive
+        run: |
+          mkdir -p dist
+          git archive --format=zip --prefix=ios-agent-playbook/ --output=dist/ios-agent-playbook-v1.0.0.zip HEAD
+      - name: Publish release if missing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view v1.0.0 >/dev/null 2>&1; then
+            echo "v1.0.0 already exists"
+          else
+            gh release create v1.0.0 dist/ios-agent-playbook-v1.0.0.zip \
+              --target "$GITHUB_SHA" \
+              --title "iOS Agent Playbook v1.0.0" \
+              --notes "Initial public release: the ios-playbook skill with five modes and nine verification gates, 11 on-demand references, two read-only helper scripts, a Copilot custom agent, personal and project installers for Claude Code and GitHub Copilot, a Claude Code plugin manifest, ten benchmark tasks and validation tests."
+          fi

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A planning, slicing and verification playbook for AI coding agents doing iOS work in Swift, SwiftUI and SwiftData. For Claude Code, GitHub Copilot and Copilot for Xcode.">
+  <meta property="og:title" content="iOS Agent Playbook">
+  <meta property="og:description" content="Plan, slice, verify. A process your coding agent cannot skip.">
+  <meta property="og:image" content="https://sahinraj.github.io/ios-agent-playbook/assets/social-preview.png">
+  <meta property="og:url" content="https://sahinraj.github.io/ios-agent-playbook/">
+  <meta name="theme-color" content="#070b16">
+  <title>iOS Agent Playbook</title>
+  <link rel="icon" href="assets/icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="iOS Agent Playbook home">
+      <span class="brand-mark" aria-hidden="true">&#10003;</span>
+      <span>iOS Agent Playbook</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#loop">The loop</a>
+      <a href="#modes">Modes</a>
+      <a href="#install">Install</a>
+      <a href="https://github.com/sahinraj/ios-agent-playbook">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="eyebrow">Swift · SwiftUI · SwiftData · Claude Code · GitHub Copilot</div>
+      <h1>Give your coding agent<br><span>a process it cannot skip.</span></h1>
+      <p class="hero-copy">Most failed iOS changes are process failures: editing before reading the project, fixing a bug without reproducing it, one giant diff, and "done" without a build. This playbook makes the agent size the risk, plan in small slices, verify each one and report with evidence.</p>
+      <div class="actions">
+        <a class="button primary" href="#install">Install now</a>
+        <a class="button secondary" href="https://github.com/sahinraj/ios-agent-playbook">View source</a>
+      </div>
+      <div class="terminal" role="region" aria-label="Installation command">
+        <span class="prompt">$</span>
+        <code>curl -fsSL https://sahinraj.github.io/ios-agent-playbook/install.sh | bash</code>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Project highlights">
+      <div><strong>9</strong><span>verification gates</span></div>
+      <div><strong>5</strong><span>modes, one command</span></div>
+      <div><strong>11</strong><span>references, loaded on demand</span></div>
+      <div><strong>MIT</strong><span>open-source license</span></div>
+    </section>
+
+    <section id="loop" class="section">
+      <div class="section-heading">
+        <span class="eyebrow">The loop</span>
+        <h2>Six steps, sized to the task.</h2>
+      </div>
+      <div class="loop">
+        <article>
+          <span class="number">00</span>
+          <h3>Size</h3>
+          <p>Trivial, standard or high risk. A typo fix stays cheap. A schema change on a shipped store gets the full process and your approval first.</p>
+        </article>
+        <article>
+          <span class="number">01</span>
+          <h3>Read</h3>
+          <p>Deployment target, Swift mode, default isolation, schemes, the pattern already in use, a baseline build. For a bug, a reproduction before any fix.</p>
+        </article>
+        <article>
+          <span class="number">02</span>
+          <h3>Plan</h3>
+          <p>Goal, scope, assumptions marked verified or not, slices with their gates, and the things the compiler will not catch.</p>
+        </article>
+        <article>
+          <span class="number">03</span>
+          <h3>Slice</h3>
+          <p>One concept per slice. Each one builds and passes on its own. Refactors and migrations never share a slice with anything else.</p>
+        </article>
+        <article>
+          <span class="number">04</span>
+          <h3>Verify</h3>
+          <p>Build, targeted tests, a test that fails first, a migration test against the shipped store, Thread Sanitizer, a UI walk, previews, a diff audit.</p>
+        </article>
+        <article>
+          <span class="number">05</span>
+          <h3>Report</h3>
+          <p>What changed, the command and result behind every claim, what was not verified, and what was noticed but left alone.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="modes" class="section">
+      <div class="section-heading">
+        <span class="eyebrow">One command</span>
+        <h2>Map once. Plan with your best model. Execute with a cheaper one.</h2>
+      </div>
+      <table class="modes">
+        <thead>
+          <tr><th>Command</th><th>What it does</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>/ios-playbook map</td><td>Reads the repo and writes a repo map (working build commands, settings, patterns) and a risk map (where changes break silently). Every later session starts from facts.</td></tr>
+          <tr><td>/ios-playbook plan &lt;task&gt;</td><td>Plan only, saved to a file. Written so another model or a fresh session can execute it without making design decisions.</td></tr>
+          <tr><td>/ios-playbook execute &lt;file&gt;</td><td>Carries out a saved plan one verified slice at a time, and stops if the plan no longer matches the code.</td></tr>
+          <tr><td>/ios-playbook verify</td><td>Runs the gates on the current working tree and reports. No edits.</td></tr>
+          <tr><td>/ios-playbook &lt;task&gt;</td><td>The whole loop, from sizing to report.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section compatibility">
+      <div>
+        <span class="eyebrow">Use it where you work</span>
+        <h2>One skill across your tools.</h2>
+      </div>
+      <ul>
+        <li><span>01</span>Claude Code</li>
+        <li><span>02</span>VS Code with GitHub Copilot</li>
+        <li><span>03</span>GitHub Copilot CLI</li>
+        <li><span>04</span>Copilot for Xcode</li>
+      </ul>
+    </section>
+
+    <section id="install" class="section install">
+      <span class="eyebrow">One line</span>
+      <h2>Start using it in minutes.</h2>
+      <div class="code-block">
+        <button type="button" id="copy" aria-label="Copy installation command">Copy</button>
+        <pre><code id="commands">curl -fsSL https://sahinraj.github.io/ios-agent-playbook/install.sh | bash</code></pre>
+      </div>
+      <p>The script installs for Claude Code and Copilot, whichever you have. For Copilot for Xcode or a team repository, run <code>curl -fsSL https://sahinraj.github.io/ios-agent-playbook/install.sh | bash -s -- project ~/path/to/YourApp</code>. Prefer to read the script first? Clone the repo and run <code>./install.sh personal</code>.</p>
+      <p>This playbook is process only. For Swift, SwiftUI and SwiftData knowledge, pair it with <a href="https://github.com/sahinraj/ios-swift-master-copilot">iOS Swift Master</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>Built by Sahin Nisar Raj</span>
+    <span>Independent community project · MIT licensed</span>
+  </footer>
+
+  <script>
+    const button = document.querySelector('#copy');
+    button.addEventListener('click', async () => {
+      await navigator.clipboard.writeText(document.querySelector('#commands').textContent);
+      button.textContent = 'Copied';
+      setTimeout(() => { button.textContent = 'Copy'; }, 1600);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
++ \.playbook/plans/	saves the plan to a file
++ [Dd]one when|[Dd]one looks like	says what done looks like for each slice
++ [Ss]top (and report )?if|[Ss]top condition	lists stop conditions for the executor
++ [Cc]ommit	records the commit the plan was written against
++ [Mm]ost likely to go wrong|[Tt]raps?	writes down the traps
++ execute	tells the user how to run the plan

@@ -1,0 +1,6 @@
+.DS_Store
+*.backup-*
+*.zip
+dist/
+
+evals/results/

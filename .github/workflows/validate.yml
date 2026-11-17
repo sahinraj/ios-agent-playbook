@@ -1,0 +1,37 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    name: Package (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Check shell syntax
+        run: bash -n install.sh docs/install.sh evals/score.sh tests/*.sh skills/ios-playbook/scripts/*.sh
+      - name: Lint shell scripts
+        if: runner.os == 'Linux'
+        run: shellcheck -S warning install.sh docs/install.sh evals/score.sh tests/*.sh skills/ios-playbook/scripts/*.sh
+      - name: Verify package
+        run: ./install.sh verify
+      - name: Test helper scripts
+        run: bash tests/scripts_test.sh
+      - name: Test install and uninstall
+        run: bash tests/install_test.sh
+      - name: Test one-line bootstrap
+        run: bash tests/bootstrap_test.sh
+      - name: Test eval harness
+        run: bash tests/evals_test.sh

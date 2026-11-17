@@ -1,0 +1,5 @@
++ [Tt]rivial	sizes the task as trivial
++ [Bb]uil[dt]	still builds after the edit
+- Slices:	does not write a slice plan for a one-line edit
+- VersionedSchema|[Mm]igration test	does not drag in unrelated process
+- [Cc]onsult(ing)? the advisor	does not consult the advisor on a trivial task

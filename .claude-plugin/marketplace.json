@@ -1,0 +1,17 @@
+{
+  "name": "ios-agent-playbook",
+  "owner": {
+    "name": "Sahin Nisar Raj",
+    "url": "https://github.com/sahinraj"
+  },
+  "description": "The iOS Agent Playbook: a process skill for AI coding agents doing Apple platform work.",
+  "plugins": [
+    {
+      "name": "ios-playbook",
+      "source": "./",
+      "description": "Planning, slicing and verification playbook for iOS work in Swift, SwiftUI and SwiftData.",
+      "category": "development",
+      "tags": ["ios", "swift", "swiftui", "swiftdata", "xcode"]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
++ [Rr]isk:?[* ]*high|[Hh]igh[- ]risk	sizes an isolation change as high risk
++ [Aa]ctor	decides where the state lives
++ [Rr]eentran	names reentrancy as something the compiler will not catch
++ [Tt]hread ?[Ss]anitizer|TSan	runs the tests under Thread Sanitizer
++ [Bb]aseline	takes a baseline first

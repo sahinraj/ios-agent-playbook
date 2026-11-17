@@ -1,0 +1,6 @@
++ [Rr]isk:?[* ]*high|[Hh]igh[- ]risk	sizes the task as high risk
++ VersionedSchema	adds a versioned schema for the shipped shape
++ [Mm]igration (test|plan|stage)|SchemaMigrationPlan	plans a migration stage and a migration test
++ [Dd]uplicate	deals with duplicates that already exist
++ (store|schema).{0,80}(previous|shipped|old|V1)|(previous|shipped|old|V1).{0,80}(store|schema)	tests against a store written by the shipped schema
+- [Rr]isk:?[* ]*(trivial|standard)	does not undersize a shipped schema change

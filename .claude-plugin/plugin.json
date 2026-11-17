@@ -1,0 +1,15 @@
+{
+  "name": "ios-playbook",
+  "displayName": "iOS Playbook",
+  "version": "1.0.0",
+  "description": "Planning, slicing and verification playbook for iOS work in Swift, SwiftUI and SwiftData. Sizes the risk, reads the project first, works in small verified slices and reports with evidence.",
+  "author": {
+    "name": "Sahin Nisar Raj",
+    "url": "https://github.com/sahinraj"
+  },
+  "homepage": "https://sahinraj.github.io/ios-agent-playbook/",
+  "repository": "https://github.com/sahinraj/ios-agent-playbook",
+  "license": "MIT",
+  "keywords": ["ios", "swift", "swiftui", "swiftdata", "xcode", "planning", "verification", "agent-skills"],
+  "agents": []
+}

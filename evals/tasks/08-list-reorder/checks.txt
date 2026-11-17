@@ -1,0 +1,5 @@
++ (has )?n(ot|ever) (been )?shipped|unshipped	records that the store has not shipped
++ [Ii]dentity|Identifiable	checks list identity
++ Dynamic Type|text size	checks large text sizes
++ VoiceOver|[Aa]ccessibility	checks accessibility
++ Compiler will not catch	fills in the silent failure list
